@@ -3,26 +3,11 @@
 	<head>
 		<link rel="icon" type="image/png" href="icon_032.png">
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-		<script type="text/javascript">
-	function show(divID) {
-		var item = document.getElementById(divID);
-		var item1 = document.getElementById('Home');
-		var item2 = document.getElementById('Decimaal_Binair');
-		var item3 = document.getElementById('Euro_Dollar');
-		var item4 = document.getElementById('Inkomen');
-		var item4 = document.getElementById('De_makers');
-		if (item.className == "hidden") {
-			item.className = "visible";
-		} 
-    	else {
-    		item.className = "hidden";
-    	}
-	}
-</script>
-<script type="text/javascript" src="rekenmachine.js"></script>
+		<script type="text/javascript" src="pageregulatorthingy.js"></script>
+		<script type="text/javascript" src="inkomen.js"></script>
 		<title> Home </title>
 	</head>
-	<body>
+	<body onload="show('Home')">
 		<div class= "navbar_position">
 			<a href= "javascript:show('Home');"> <div class= "navbar"> Home </div> </a>
 			<a href= "javascript:show('Decimaal_Binair');"> <div class= "navbar"> Decimaal - Binair </div> </a>
@@ -33,7 +18,7 @@
 		<div class= "header">
 			<h2> Rekenmachines </h2>
 		</div>
-			<div id="Home" class="hidden">
+			<div id="Home" class="hidden" onload="show(divID)">
 			<p> Wij hebben drie rekenmachines ontworpen: </p>
 				<ul>
 					<li> Decimaal - Binair </li>
@@ -45,9 +30,10 @@
 			<div id="Decimaal_Binair" class="hidden">
 				<p> Welkom op de pagina met de rekenmachine die decimale getallen omrekent naar binaire getallen. </p><br><br>
 				<form name="FormDecimalBinary">
-					Als u binair naar decimaal wilt converteren, voer het binaire getal dan hier in: <input type="text" id="bin" value=""><br><br>
-					Als u decimaal naar binair wilt converteren, voer het decimale getal dan hier in: <input type="text" id="dec" value=""><br><br>
-					<input type="button" class="button" value="Converteer">
+					Als u binair naar decimaal wilt converteren, voer het binaire getal dan hier in: <input type="text" id="bin" value="" placeholder="Binair...">
+					<input type="button" class="button" value="Converteer"><br><br>
+					Als u decimaal naar binair wilt converteren, voer het decimale getal dan hier in: <input type="text" id="dec" value="" placeholder="Decimaal...">
+					<input type="button" class="button" value="Converteer"><br><br>
 				</form>
 			</div>
 			<div id="Euro_Dollar" class="hidden">
@@ -55,16 +41,16 @@
 				<form name="Form_valuta">
 					<input type="radio" id="dollar-euro" name="valutacalc"> Dollars omrekenen naar euro's. <br><br>
 					<input type="radio" id="euro-dollar" name="valutacalc"> Euro's omrekenen naar dollars. <br><br>
-					Voer hier de koers van de dollar in: <input type="text" name="getal1" value="">. <br><br>
-					Voer hier het bedrag wat u wilt omrekenen in: <input type="text" name="getal2" value="">. <br><br>
+					Voer hier de koers van de dollar in: <input type="text" name="getal1" value="" placeholder="Dollarkoers...">. <br><br>
+					Voer hier het bedrag wat u wilt omrekenen in: <input type="text" name="getal2" value="" placeholder="Bedrag...">. <br><br>
 					<input type="button" class="button" value="Bereken">
 				</form>
 			</div>
 			<div id="Inkomen" class="hidden">
 				<p> Welkom op de pagina met de rekenmachine die een inkomen uitrekent. </p><br><br>
 				<form name="inkomen">
-					Voer hier uw uurloon in: <input type="text" name="uurloon" value=""><br><br>
-					Voer hier de gewerkte uren in: <input type="text" name="uren" value=""><br><br>
+					Voer hier uw uurloon in: <input type="text" name="uurloon" value="" placeholder="bijv. 15.50"><br><br>
+					Voer hier de gewerkte uren en minuten in: <input type="text" name="uren" value="" placeholder="Uren...">, <input type="text" name="minuten" value="" placeholder="Minuten..."><br><br>
 					<input type="button" class="button" value="Bereken mijn inkomen">
 				</form>
 			</div>
