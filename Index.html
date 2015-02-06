@@ -4,15 +4,22 @@
 		<link rel="icon" type="image/png" href="icon_032.png">
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<script type="text/javascript">
-  function show(divID) {
-    var item = document.getElementById(divID);
-    if (item.className == "hidden") {
-      item.className = "visible";
-    } else {
-      item.className = "hidden";
-    }
-  }
+	function show(divID) {
+		var item = document.getElementById(divID);
+		var item1 = document.getElementById('Home');
+		var item2 = document.getElementById('Decimaal_Binair');
+		var item3 = document.getElementById('Euro_Dollar');
+		var item4 = document.getElementById('Inkomen');
+		var item4 = document.getElementById('De_makers');
+		if (item.className == "hidden") {
+			item.className = "visible";
+		} 
+    	else {
+    		item.className = "hidden";
+    	}
+	}
 </script>
+<script type="text/javascript" src="rekenmachine.js"></script>
 		<title> Home </title>
 	</head>
 	<body>
@@ -26,7 +33,6 @@
 		<div class= "header">
 			<h2> Rekenmachines </h2>
 		</div>
-		<div id="content">
 			<div id="Home" class="hidden">
 			<p> Wij hebben drie rekenmachines ontworpen: </p>
 				<ul>
@@ -37,15 +43,34 @@
 			<p> Tot slot is er ook nog een pagina gemaakt met informatie over de makers. </p>
 			</div>
 			<div id="Decimaal_Binair" class="hidden">
-				<p> Welkom op de pagina met de rekenmachine die decimale getallen omrekent naar binaire getallen. </p>
+				<p> Welkom op de pagina met de rekenmachine die decimale getallen omrekent naar binaire getallen. </p><br><br>
+				<form name="FormDecimalBinary">
+					Als u binair naar decimaal wilt converteren, voer het binaire getal dan hier in: <input type="text" id="bin" value=""><br><br>
+					Als u decimaal naar binair wilt converteren, voer het decimale getal dan hier in: <input type="text" id="dec" value=""><br><br>
+					<input type="button" class="button" value="Converteer">
+				</form>
 			</div>
 			<div id="Euro_Dollar" class="hidden">
-				<p> Welkom op de pagina met de rekenmachine die Euro's omzet in Dollars. </p>
+				<p> Welkom op de pagina met de rekenmachine die Euro's omzet in Dollars. </p><br><br>
+				<form name="Form_valuta">
+					<input type="radio" id="dollar-euro" name="valutacalc"> Dollars omrekenen naar euro's. <br><br>
+					<input type="radio" id="euro-dollar" name="valutacalc"> Euro's omrekenen naar dollars. <br><br>
+					Voer hier de koers van de dollar in: <input type="text" name="getal1" value="">. <br><br>
+					Voer hier het bedrag wat u wilt omrekenen in: <input type="text" name="getal2" value="">. <br><br>
+					<input type="button" class="button" value="Bereken">
+				</form>
 			</div>
 			<div id="Inkomen" class="hidden">
-				<p> Welkom op de pagina met de rekenmachine die een inkomen uitrekent. </p>
+				<p> Welkom op de pagina met de rekenmachine die een inkomen uitrekent. </p><br><br>
+				<form name="inkomen">
+					Voer hier uw uurloon in: <input type="text" name="uurloon" value=""><br><br>
+					Voer hier de gewerkte uren in: <input type="text" name="uren" value=""><br><br>
+					<input type="button" class="button" value="Bereken mijn inkomen">
+				</form>
 			</div>
-			<div id="De_makers" class="hidden">...</div>
-		</div>
+			<div id="De_makers" class="hidden">
+				<p>De makers van deze site zijn Daphne Oudejans en Annemarieke van Dijk. Deze site is een PO voor informatica.</p>
+				<p>...</p>
+			</div>
 	</body>
 </html>

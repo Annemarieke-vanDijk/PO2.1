@@ -91,3 +91,20 @@ div {
 #Home.visible, #Decimaal_Binair.visible, #Euro_Dollar.visible, #Inkomen.visible, #De_makers.visible {
   display: block;
 }
+
+.button {
+	height: auto;
+	width: auto;
+	font-size: 15px;
+	padding: 5px 5px 5px 5px;
+	background: linear-gradient(to top, #9E72A8, #7F488C);
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.button:hover {
+	font-size: 15px;
+	color: black;
+	background: linear-gradient(to bottom, #9E72A8, #7F488C);
+}
