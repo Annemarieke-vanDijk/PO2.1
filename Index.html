@@ -3,19 +3,16 @@
 	<head>
 		<link rel="icon" type="image/png" href="icon_032.png">
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-		
 		<script type="text/javascript">
-			function show(divID) {
-			var item = document.getElementById(divID);
-				if (item.className == "hidden") {
-    				item.className = "visible";
-		    { 
-		    	else {
-		    		item.className = "hidden";
-		    	}
-  			}
+  function show(divID) {
+    var item = document.getElementById(divID);
+    if (item.className == "hidden") {
+      item.className = "visible";
+    } else {
+      item.className = "hidden";
+    }
+  }
 </script>
-
 		<title> Home </title>
 	</head>
 	<body>
@@ -29,7 +26,8 @@
 		<div class= "header">
 			<h2> Rekenmachines </h2>
 		</div>
-		<div id="Home" class="hidden">
+		<div id="content">
+			<div id="Home" class="hidden">
 			<p> Wij hebben drie rekenmachines ontworpen: </p>
 				<ul>
 					<li> Decimaal - Binair </li>
@@ -37,16 +35,17 @@
 					<li> Inkomen </li>
 				</ul>
 			<p> Tot slot is er ook nog een pagina gemaakt met informatie over de makers. </p>
+			</div>
+			<div id="Decimaal_Binair" class="hidden">
+				<p> Welkom op de pagina met de rekenmachine die decimale getallen omrekent naar binaire getallen. </p>
+			</div>
+			<div id="Euro_Dollar" class="hidden">
+				<p> Welkom op de pagina met de rekenmachine die Euro's omzet in Dollars. </p>
+			</div>
+			<div id="Inkomen" class="hidden">
+				<p> Welkom op de pagina met de rekenmachine die een inkomen uitrekent. </p>
+			</div>
+			<div id="De_makers" class="hidden">...</div>
 		</div>
-		<div id="Decimaal_Binair" class="hidden">
-			<p> Welkom op de pagina met de rekenmachine die decimale getallen omrekent naar binaire getallen. </p>
-		</div>
-		<div id="Euro_Dollar" class="hidden">
-			<p> Welkom op de pagina met de rekenmachine die Euro's omzet in Dollars. </p>
-		</div>
-		<div id="Inkomen" class="hidden">
-			<p> Welkom op de pagina met de rekenmachine die een inkomen uitrekent. </p>
-		</div>
-		<div id="De_makers" class="hidden">...</div>
 	</body>
 </html>
