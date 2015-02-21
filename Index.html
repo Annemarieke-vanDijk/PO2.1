@@ -5,6 +5,7 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<script type="text/javascript" src="pageregulatorthingy.js"></script>
 		<script type="text/javascript" src="inkomen.js"></script>
+		<script type="text/javascript" src="Euro_Dollar.js"></script>
 		<title> Home </title>
 	</head>
 	<body onload="show('Home')">
@@ -30,10 +31,10 @@
 			<div id="Decimaal_Binair" class="hidden">
 				<p> Welkom op de pagina met de rekenmachine die decimale getallen omrekent naar binaire getallen. </p><br><br>
 				<form name="FormDecimalBinary">
-					Als u binair naar decimaal wilt converteren, voer het binaire getal dan hier in: <input type="text" id="bin" value="" placeholder="Binair...">
-					<input type="button" class="button" value="Converteer"><br><br>
-					Als u decimaal naar binair wilt converteren, voer het decimale getal dan hier in: <input type="text" id="dec" value="" placeholder="Decimaal...">
-					<input type="button" class="button" value="Converteer"><br><br>
+				<input type="radio" id="dec-bin" name="converter">Selecteer deze optie om van decimaal naar binair te converteren.<br><br>
+				<input type="radio" id="bin-dec" name="converter">Selecteer deze optie om van binair naar decimaal te converteren.<br><br>
+				Voer hier het te converteren decimale of binaire getal: <input type="text" id="number" name="number" placeholder="Decimaal of Binair?">
+				<input onclick="alert(decimalBinaryHandler())" type="button" class="button" value="Converteer" id="convert"><br><br>
 				</form>
 			</div>
 			<div id="Euro_Dollar" class="hidden">
@@ -41,22 +42,25 @@
 				<form name="Form_valuta">
 					<input type="radio" id="dollar-euro" name="valutacalc"> Dollars omrekenen naar euro's. <br><br>
 					<input type="radio" id="euro-dollar" name="valutacalc"> Euro's omrekenen naar dollars. <br><br>
-					Voer hier de koers van de dollar in: <input type="text" name="getal1" value="" placeholder="Dollarkoers...">. <br><br>
-					Voer hier het bedrag wat u wilt omrekenen in: <input type="text" name="getal2" value="" placeholder="Bedrag...">. <br><br>
-					<input type="button" class="button" value="Bereken">
+					Voer hier de koers van de dollar in: <input type="text" name="getal1" id="dollarkoers" value="" placeholder="Dollarkoers...">. <br><br>
+					Voer hier het bedrag wat u wilt omrekenen in: <input type="text" name="getal2" id="omrekengetal" value="" placeholder="Bedrag...">. <br><br>
+					<input onclick="valutaCalculator();" type="button" class="button" value="Bereken">
 				</form>
 			</div>
 			<div id="Inkomen" class="hidden">
 				<p> Welkom op de pagina met de rekenmachine die een inkomen uitrekent. </p><br><br>
 				<form name="inkomen">
-					Voer hier uw uurloon in: <input type="text" name="uurloon" value="" placeholder="bijv. 15.50"><br><br>
-					Voer hier de gewerkte uren en minuten in: <input type="text" name="uren" value="" placeholder="Uren...">, <input type="text" name="minuten" value="" placeholder="Minuten..."><br><br>
-					<input type="button" class="button" value="Bereken mijn inkomen">
+					Voer hier uw uurloon in: <input type="text" id="uurloon" value="" placeholder="bijv. 15.50"><br><br>
+					Voer hier de gewerkte uren en minuten in: <input type="text" id="uren" value="" placeholder="Uren...">, <input type="text" id="minuten" value="" placeholder="Minuten..."><br><br>
+					<input type="button" class="button" value="Bereken mijn inkomen" href="">
 				</form>
 			</div>
 			<div id="De_makers" class="hidden">
-				<p>De makers van deze site zijn Daphne Oudejans en Annemarieke van Dijk. Deze site is een PO voor informatica.</p>
-				<p>...</p>
+				<p>De makers van deze site zijn Daphne Oudejans en Annemarieke van Dijk. Deze site is onderdeel van het tweede PO voor informatica.</p>
+				<p>Wij zitten beiden op RSG Broklede in Breukelen. Wij doen 4 vwo en hebben informatica als extra vak gekozen.</p>
+				<p>Onze samenwerking verliep goed. Echter, omdat wij dit vak als extra vak hebben, hadden wij minder tijd in de les dan anderen. Deze site is dan ook voornamelijk thuis gemaakt, zonder toeziend oog van de enige en de beste informatica docent van Breukelen en omstreken, Remie Woudt.</p>
+				<p>Wij kunnen samen heel goed werken, na al die scheikunde verslagen weten we wat we van elkaar kunnnen verwachten.</p>
+				<p> Wij zijn goede vriendinnen. We spreken soms af, meestal blijven we ook bij elkaar eten, dan hebben we altijd de grootste lol. Vooral als het toetje yoghurt (Annemarieke eet namelijk als een hamster en ze heeft een crush op Joost (he he he *pedo smiley*)) is of als het over hersenchirurgie gaat.</p>
 			</div>
 	</body>
 </html>
