@@ -1,8 +1,8 @@
-function incomeCalc(uurloon, uren, minuten) {
-	var uurloon = document.getElementById("uurloon");
-	var uren = document.getElementById("uren");
-	var minuten = document.getElementById("minuten");
+function incomeCalc() {
+	var uurloon = parseFloat(document.getElementById("uurloon").value);
+	var uren = document.getElementById("uren").value;
+	var minuten = document.getElementById("minuten").value;
 
-	var income = uurloon * (uren + minuten*1/60);
-	alert(income);
+	var income = uurloon * (uren+minuten*1/60);
+	alert(income.toFixed(2));
 }
