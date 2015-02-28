@@ -1,29 +1,26 @@
-var radio0 = document.getElementById('dec-bin')
-var radio1 = document.getElementById('dec-bin').checked
-var radio2 = document.getElementById('bin-dec')
-var radio3 = document.getElementById('bin-dec').checked
-
-var number = document.getElementById()
-
 function decimalBinaryHandler () {
-	var radioDecimalToBinary = document.getElementById('dec-bin');
-	var radioBinaryToDecimal = document.getElementById('bin-dec');
-
-	if (radioBinaryToDecimal.checked) {
-		alert('hello');
+    var number = document.getElementById('number').value;
+    //Voor het omrekenen van decimaal naar binair.
+	if (document.getElementById('dec-bin').checked) {
+        alert(decimalToBinary(number));
+	}
+	//voor het omrekenen van binair naar decimaal
+    if (document.getElementById('bin-dec').checked) {
+		//body...
 	}
 }
 
-function isEven(input){
-    if(input % 2 === 0){
+function isEven(number){
+    if(number % 2 === 0){
         return true;
     }
     return false;
 }
 
-function decimalToBinary(input){
-    var decimal = input;
-    var binary = "_";
+function decimalToBinary(decimal){
+    decimal = parseInt(decimal);
+
+    var binary = '';
     
     while(true){
         if(decimal === 0){
@@ -36,6 +33,7 @@ function decimalToBinary(input){
             binary = "1" + binary;
             decimal--;
         }
-        
+        decimal = decimal/2;
     }
 }
+
