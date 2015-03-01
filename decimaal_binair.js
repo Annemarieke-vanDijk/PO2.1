@@ -6,10 +6,10 @@ function decimalBinaryHandler () {
 	}
 	//voor het omrekenen van binair naar decimaal
     if (document.getElementById('bin-dec').checked) {
-		//body...
-	}
+        alert(binaryToDecimal(number));
+    }
 }
-
+/*Decimaal naar binair*/
 function isEven(number){
     if(number % 2 === 0){
         return true;
@@ -36,4 +36,12 @@ function decimalToBinary(decimal){
         decimal = decimal/2;
     }
 }
+/*einde decimaal naar binair*/
 
+/*binair naar decimaal*/
+function binaryToDecimal(binaryNumber){
+   binaryNumber = parseInt(binaryNumber,2);
+   var decimalNumber = binaryNumber.toString(10);
+   return decimalNumber;
+ }
+/*einde binair naar decimaal*/
