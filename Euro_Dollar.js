@@ -4,9 +4,10 @@ function valutaCalculator () {
 	var uitkomst;
 	if (document.getElementById("dollar-euro").checked) {
 		uitkomst = omrekengetal/dollarkoers;
+		alert('$'+omrekengetal + ' is €' + uitkomst.toFixed(2) + ' waard.');
 	}
 	if (document.getElementById("euro-dollar").checked) {
 		uitkomst = omrekengetal*dollarkoers;
+		alert('€' + omrekengetal + ' is $' + uitkomst.toFixed(2) + ' waard.');
 	}
-	alert(uitkomst.toFixed(2));
 }

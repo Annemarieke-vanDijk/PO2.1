@@ -2,11 +2,11 @@ function decimalBinaryHandler () {
     var number = document.getElementById('number').value;
     //Voor het omrekenen van decimaal naar binair.
 	if (document.getElementById('dec-bin').checked) {
-        alert(decimalToBinary(number));
+        alert('Het decimale getal ' + number + ' is het binaire getal ' + decimalToBinary(number));
 	}
 	//voor het omrekenen van binair naar decimaal
     if (document.getElementById('bin-dec').checked) {
-        alert(binaryToDecimal(number));
+        alert('Het binaire getal ' + number + ' is het decimale getal ' + binaryToDecimal(number));
     }
 }
 /*Decimaal naar binair*/
