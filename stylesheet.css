@@ -116,3 +116,7 @@ div {
 	color: black;
 	background: linear-gradient(to top, #9E72A8, #7F488C);
 }
+
+.selfie {
+	width: 250px;
+}
